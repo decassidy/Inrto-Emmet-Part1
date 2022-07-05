@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Emmet Tutorial - Cassidy Media</title>
+	</head>
+	<body>
+	
+<!-- 		1. Elements are HTML tags that can be generated quickly -->
+<!-- 		div + tab/enter key = <div></div> will produce -->
+
+<!-- 		2. Emmet nesting operators: -->
+<!-- 		2a. Child: > -->
+<!-- 		You can use > operator to nest elements inside each other: -->
+<!-- 		div>ul>li will produce -->
+
+
+<!-- 		2b. Sibling: + -->
+<!-- 		Use + operator to place elements near each other, on the same level: -->
+<!-- 		div+p+bq ...will output -->
+
+<!-- 		Replace this code with div+p+bq -->
+
+
+<!-- 		2c. Climb-up ^ -->
+<!-- 		With > operator you're descending the generated tree and positions of all sibling elements will be resolved -->
+<!-- 		against the deepest element: -->
+<!-- 		div+div>p>span+em ...will expand to  -->
+
+<!-- 		Replace this code with div+div>p>span+em -->
+
+
+<!-- 		With ^ operator, you can climb one level up the tree and change context where following elements should appear: -->
+<!-- 		div+div>p>span+em^bq ...outputs to: -->
+
+<!-- 		Replace this code with div+div>p>span+em^bq -->
+
+
+<!-- 		You can use as many ^ operators as you like, each operator will move one level up: -->
+<!-- 		div+div>p>span+em^^^bq  ...outputs to: -->
+
+<!-- 		Replace this code with div+div>p>span+em^^^bq -->
+
+
+<!-- 		2d. Multiplication: * -->
+<!-- 		With the * operator you can define how many times elements should be outputted -->
+<!-- 		ul>li*5 ...outputs to: -->
+
+<!-- 		Replace this code with ul>li*5 -->
+
+
+<!-- 		2e. Grouping: () -->
+<!-- 		Parentheses are used by Emmet's power users for grouping subtrees in complex abbreviations: -->
+<!-- 		div>(header>ul>li*2>a)+footer>p ...expands to: -->
+
+<!-- 		Replace this code with div>(header>ul>li*2>a)+footer>p -->
+
+
+<!-- 		If you’re working with browser’s DOM, you may think of groups as Document Fragments: each group contains -->
+<!-- 		abbreviation subtree and all the following elements are inserted at the same level as the first element -->
+<!-- 		of group. -->
+
+<!-- 		You can nest groups inside each other and combine them with multiplication * operator: -->
+
+<!-- 		(div>dl>(dt+dd)*3)+footer>p ...produces -->
+
+<!-- 		Replace this code with (div>dl>(dt+dd)*3)+footer>p -->
+
+
+
+<!-- 		3. Attribute operators -->
+
+<!-- 		Attribute operators are used to modify attributes of outputted elements. For example, in HTML and XML you can -->
+<!-- 		quickly add class attribute to generated element. -->
+
+<!-- 		3a. ID and CLASS -->
+
+<!-- 		In CSS, you use elem#id and elem.class notation to reach the elements with specified id or class attributes. -->
+<!-- 		In Emmet, you can use the very same syntax to add these attributes to specified element: -->
+
+<!-- 		div#header+div.page+div#footer.class1.class2.class3 ...will output: -->
+
+<!-- 		Replace this code with div#header+div.page+div#footer.class1.class2.class3 -->
+
+<!-- 		3b. Custom attributes -->
+
+<!-- 		You can use [attr] notation (as in CSS) to add custom attributes to your element: -->
+
+<!-- 		td[title="Hello world!" colspan=3] ...outputs to: -->
+
+<!-- 		Replace this code with td[title="Hello world!" colspan=3] -->
+
+
+<!-- 		- You can place as many attributes as you like inside square brackets. -->
+<!-- 		- You don’t have to specify attribute values: td[colspan title] will produce  -->
+<!-- 		   <td colspan="" title=""> with tab stops inside each empty attribute (if your editor supports them).  -->
+<!-- 		- You can use single or double quotes for quoting attribute values. -->
+<!--        - You don’t need to quote values if they don’t contain spaces: td[title=hello colspan=3] will work. -->
+
+<!-- 		3c. Item numbering: $ -->
+
+<!-- 		With multiplication * operator you can repeat elements, but with $ you can number them. Place $ operator inside -->
+<!-- 		element’s name, attribute’s name or attribute’s value to output current number of repeated element: -->
+
+<!-- 		ul>li.item$*5 ...outputs to: -->
+
+<!-- 		Replace this code with ul>li.item$*5 -->
+
+<!-- 		You can use multiple $ in a row to pad number with zeroes: -->
+
+<!-- 		ul>li.item$$$*5 ...outputs to: -->
+
+<!-- 		Replace this code with ul>li.item$$$*5 -->
+
+<!-- 		3d. Changing numbering base and direction -->
+
+<!-- 		With @ modifier, you can change numbering direction (ascending or descending) and base (e.g. start value). -->
+
+<!-- 		For example, to change direction, add @- after $: -->
+
+<!-- 		ul>li.item$@-*5 ...outputs to: -->
+
+<!-- 		Replace this code with ul>li.item$@-*5 -->
+
+<!-- 		To change counter base value, add @N modifier to $: -->
+<!-- 		ul>li.item$@3*5 ...transforms to: -->
+
+<!-- 		Replace this code with ul>li.item$@3*5 -->
+
+<!-- 		You can use these modifiers together: -->
+<!-- 		ul>li.item$@-3*5 ...is transformed to: -->
+
+<!-- 		Replace this code with ul>li.item$@-3*5 -->
+		
+<!-- 		4. Text: {} -->
+<!-- 		You can use curly braces to add text to element: -->
+<!-- 		a{Click me} ...will produce -->
+
+<!-- 		Replace this code with a{Click me} -->
+
+<!-- 		Note that {text} is used and parsed as a separate element (like, div, p etc.) but has a special meaning when  -->
+<!-- 		written right after element. For example, a{click} and a>{click} will produce the same output, but  -->
+<!-- 		a{click}+b{here} and a>{click}+b{here} won’t: -->
+		
+<!-- 		Replace this code with a{click}+b{here} -->
+		
+<!-- 		Replace this code with a>{click}+b{here} -->
+
+<!-- 		In second example the <b> element is placed inside <a> element. And that’s the difference: when {text} is -->
+<!-- 		written right after element, it does not change parent context. Here’s a more complex example showing why it is -->
+<!-- 		important: -->
+
+<!-- 		p>{Click }+a{here}+{ to continue} ...produces: -->
+
+<!-- 		Replace this code with p>{Click }+a{here}+{ to continue} -->
+
+<!-- 		In this example, to write Click here to continue inside <p> element we have explicitly move down the tree with  -->
+<!-- 		> operator after p, but in case of an element we don’t have to, since we need <a> element with here word only,  -->
+<!-- 		without changing parent context. -->
+
+<!-- 		For comparison, here’s the same abbreviation written without child > operator: -->
+<!-- 		p{Click }+a{here}+{ to continue} ...produces: -->
+
+<!-- 		Replace this code with p{Click }+a{here}+{ to continue} -->
+		
+<!-- 		5. Notes on abbreviation formatting -->
+<!-- 		When you get familiar with Emmet’s abbreviations syntax, you may want to use some formatting to make your -->
+<!-- 		abbreviations more readable. For example, use spaces between elements and operators, like this: -->
+
+<!-- 		(header > ul.nav > li*5) + footer ...outputs to: -->
+		
+<!-- 		Replace this code with (header > ul.nav > li*5) + footer -->
+
+<!-- 		But it won’t work, because space is a stop symbol where Emmet stops abbreviation parsing. -->
+
+<!-- 		This is why Emmet needs some indicators (like spaces) where it should stop parsing to not expand anything that  -->
+<!-- 		you don’t need. If you’re still thinking that such formatting is required for complex abbreviations to make them -->
+<!-- 		more readable: -->
+
+<!-- 		 - Abbreviations are not a template language, they don’t have to be “readable”, they have to be “quickly  -->
+<!--            expandable and removable”. -->
+<!-- 		 - You don’t really need to write complex abbreviations. Stop thinking that “typing” is the slowest process in  -->
+<!--            web-development. You’ll quickly find out that constructing a single complex abbreviation is much slower and  -->
+<!--            error-prone than constructing and typing a few short ones. -->
+	
+	</body>
+</html>
